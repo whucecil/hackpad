@@ -18,7 +18,7 @@ if [ "$1" = 'hackpad' ]; then
 	if [ ! -f "$HACKPAD_SRC/README.md" ]; then
 		echo "I can't find any Hackpad source files. Did you forget to mount the volume?"
 		echo "e.g., docker run -d -p 9000:9000 -v /path/to/this/repo:/etc/hackpad/src hackpad"
-		exit 1
+		git clone https://github.com/whucecil/hackpad.git /etc/hackpad/src
 	fi
 
 	echo "-->Editing configuration files"
