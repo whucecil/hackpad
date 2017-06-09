@@ -11,6 +11,8 @@ RUN mkdir /etc/hackpad
 
 VOLUME /etc/hackpad/src
 
+RUN git clone https://github.com/whucecil/hackpad.git /etc/hackpad/src
+
 COPY bin/docker-entrypoint.sh /etc/hackpad/
 
 ENTRYPOINT ["/etc/hackpad/docker-entrypoint.sh"]
